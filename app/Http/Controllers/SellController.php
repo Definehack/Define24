@@ -27,6 +27,7 @@ class SellController extends Controller
         $path = $request->file('photo')->store('photos', 'public');
 
         $food = new FoodStore;
+        $food->user_id = auth()->id();
         $food->photo = $path;
         $food->category = $request->input('foodCategory');
         $food->name = $request->input('foodItemName');
@@ -35,5 +36,17 @@ class SellController extends Controller
         $food->save();
 
         return back()->with('success', 'Food item uploaded successfully.');
+    }
+
+    public function showDashboard()
+    {
+        $foods = FoodStore::where('user_id', auth()->id())->get();
+        return view('dashboard', ['foods' => $foods]);
+    }
+
+    public function showBuyFood()
+    {
+        $foods = FoodStore::all();
+        return view('buyFood', ['foods' => $foods]);
     }
 }

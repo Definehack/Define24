@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SellController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BuyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/Sell', [SellController::class, 'Sell'])->name('sellFood');
 Route::post('/Store', [SellController::class, 'store'])->name('sellFood.store');
+Route::get('/Buy', [BuyController::class, 'Buy'])->name('buyFood');
+
+Route::get('/dashboard', [SellController::class, 'showDashboard'])->name('dashboard');
+Route::get('/buyFood', [SellController::class, 'showBuyFood'])->name('buyFood');
 require __DIR__ . '/auth.php';

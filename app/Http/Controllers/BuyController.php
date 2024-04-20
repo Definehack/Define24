@@ -1,0 +1,14 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class BuyController extends Controller
+{
+    //
+    public function Buy()
+    {
+        return view('buyFood');
+    }
+}

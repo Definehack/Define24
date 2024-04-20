@@ -22,6 +22,12 @@
                         {{ __('Sell Surplus Food') }}
                     </x-nav-link>
                 </div>
+                <!-- Buy Food -->
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('buyFood')" :active="request()->routeIs('buyFood')">
+                        {{ __('Buy Food') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
