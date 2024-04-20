@@ -11,19 +11,29 @@
                 <div class="p-6 text-gray-900">
                 <form method="POST" action="{{ route('sellFood.store') }}" enctype="multipart/form-data">
                         @csrf
-                        <input type="file" name="photo" />
-
-                        <select name="foodCategory">
-                            <option value="">Select a category</option>
+                          <div style="" class="input-group">
+                            <input type="file" name="photo" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                          </div>
+                          <div class="form-group mb-3 w-50">
+                            <label>Select A Type</label>
+                        <select name ="foodCategory" class="form-select" aria-label="Default select example">
+                            <option value="" selected>Open this select menu</option>
                             <option value="fruits">Fruits</option>
                             <option value="vegetables">Vegetables</option>
                             <option value="grains">Grains</option>
-                            <!-- Add more options as needed -->
-                        </select>
-
-                        <input type="text" name="foodItemName" placeholder="Name of Food Item" />
-                        <input type="text" name="quantity" placeholder="Quantity" />
-                        <input name="Price" placeholder="Price" type="text" />
+                          </select> 
+                        </div>
+                        <div class="form-group mb-3 w-50">
+                            <input class="form-control" type="text" name="foodItemName" placeholder="Name of Food Item" />
+                          </div>
+                        <div class="form-group mb-3 w-50">
+                            <input type="number" name="quantity" placeholder="Quantity" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          </div>
+                        <div class="input-group mb-3 w-50">
+                            <span class="input-group-text">$</span>
+                            <input type="text" name="Price" placeholder="Price" class="form-control" aria-label="Amount (to the nearest dollar)">
+                          </div>
+                          <input type="submit" value="Sell Food"/>
                     </form>
                 </div>
             </div>
