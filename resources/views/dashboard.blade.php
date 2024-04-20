@@ -28,17 +28,18 @@
                                 <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
                                 <div class="card-body">
                                   <h5 class="card-title">{{ $food->name }}</h5>
+                                  <hr>
                                     <p class="card-text">{{ $food->description }}</p>
                                     <p class="card-text">Category: {{ $food->category }}</p>
                                     <p class="card-text">Quantity: {{ $food->quantity }}</p>
                                     <p class="card-text">Price: ₹{{ $food->price }}</p>
+                                    <form action="{{ route('dashboard.destroyFood', $food->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    </form>
                                 </div>
                             </div>
-                            <form action="{{ route('dashboard.destroyFood', $food->id) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit">Delete</button>
-                            </form>
                         @endforeach
                     </div>
                     <div style="flex: 1; border-left: 2px solid #001; padding-left: 1rem;">
