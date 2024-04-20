@@ -38,4 +38,8 @@ Route::get('/dashboard', [SellController::class, 'showDashboard'])->name('dashbo
 Route::get('/buyFood', [SellController::class, 'showBuyFood'])->name('buyFood');
 
 Route::delete('/dashboard/{id}', [SellController::class, 'destroyFood'])->name('dashboard.destroyFood');
+
+
+Route::post('/buyFood/{id}', [BuyController::class, 'purchase'])->name('buyFood.buy');
+
 require __DIR__ . '/auth.php';

@@ -23,27 +23,51 @@
                         <!-- Other content goes here -->
                         <p class="lead">Stock</p>
                         <hr class="mb-4">
-                        @foreach ($foods as $food)
-                            <div class="card shadow" style="width: 100%;margin-bottom:10px">
-                                <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
-                                <div class="card-body">
-                                  <h5 class="card-title">{{ $food->name }}</h5>
-                                  <hr>
-                                    <p class="card-text">{{ $food->description }}</p>
-                                    <p class="card-text">Category: {{ $food->category }}</p>
-                                    <p class="card-text">Quantity: {{ $food->quantity }}</p>
-                                    <p class="card-text">Price: ₹{{ $food->price }}</p>
-                                    <form action="{{ route('dashboard.destroyFood', $food->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger">Delete</button>
-                                    </form>
+                        @if($foods->isEmpty())
+                            <p>No items are currently available.</p>
+                        @else
+                            @foreach ($foods as $food)
+                                <div class="card shadow" style="width: 100%;margin-bottom:10px">
+                                    <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{ $food->name }}</h5>
+                                    <hr>
+                                        <p class="card-text">Category: {{ $food->category }}</p>
+                                        <p class="card-text">Quantity: {{ $food->quantity }}</p>
+                                        <p class="card-text">Price: ₹{{ $food->price }}</p>
+                
+                                        <form action="{{ route('dashboard.destroyFood', $food->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
+
+                                    </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        @endif
                     </div>
                     <div style="flex: 1; border-left: 2px solid #001; padding-left: 1rem;">
                         <!-- Other content goes here -->
+                        <p class="lead">Purchased Items</p>
+                        <hr class="mb-4">
+                        @if($boughtFoods->isEmpty())
+                            <p>No items have been purchased yet.</p>
+                        @else
+                            @foreach ($boughtFoods as $food)
+                                <!-- Display the food item -->
+                                <div class="card shadow" style="width: 100%;margin-bottom:10px">
+                                    <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
+                                    <div class="card-body">
+                                    <h5 class="card-title">{{ $food->name }}</h5>
+                                    <hr>
+                                        <p class="card-text">Category: {{ $food->category }}</p>
+                                        <p class="card-text">Quantity: {{ $food->quantity }}</p>
+                                        <p class="card-text">Price: ₹{{ $food->price }}</p>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>

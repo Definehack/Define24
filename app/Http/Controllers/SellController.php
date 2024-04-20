@@ -41,12 +41,13 @@ class SellController extends Controller
     public function showDashboard()
     {
         $foods = FoodStore::where('user_id', auth()->id())->get();
-        return view('dashboard', ['foods' => $foods]);
+        $boughtFoods = FoodStore::where('buyer_id', auth()->id())->get();
+        return view('dashboard', compact('foods', 'boughtFoods'));
     }
 
     public function showBuyFood()
     {
-        $foods = FoodStore::where('user_id', '!=', auth()->id())->get();
+        $foods = FoodStore::where('user_id', '!=', auth()->id())->whereNull('buyer_id')->get();
         return view('buyFood', ['foods' => $foods]);
     }
 
