@@ -36,4 +36,6 @@ Route::get('/Buy', [BuyController::class, 'Buy'])->name('buyFood');
 
 Route::get('/dashboard', [SellController::class, 'showDashboard'])->name('dashboard');
 Route::get('/buyFood', [SellController::class, 'showBuyFood'])->name('buyFood');
+
+Route::delete('/dashboard/{id}', [SellController::class, 'destroyFood'])->name('dashboard.destroyFood');
 require __DIR__ . '/auth.php';

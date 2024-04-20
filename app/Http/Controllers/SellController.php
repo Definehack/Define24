@@ -49,4 +49,10 @@ class SellController extends Controller
         $foods = FoodStore::where('user_id', '!=', auth()->id())->get();
         return view('buyFood', ['foods' => $foods]);
     }
+
+    public function destroyFood($id)
+    {
+        FoodStore::destroy($id);
+        return back()->with('success', 'Food item deleted successfully.');
+    }
 }
