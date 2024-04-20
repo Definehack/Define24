@@ -31,6 +31,11 @@
                                 <p>Quantity: {{ $food->quantity }}</p>
                                 <p>Price: {{ $food->price }}</p>
                                 <!-- Add more fields as needed -->
+                                <form action="{{ route('foods.destroy', $food->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit">Delete</button>
+                                </form>
                             </div>
                         @endforeach
                     </div>
