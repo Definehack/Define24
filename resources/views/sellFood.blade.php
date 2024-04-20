@@ -21,19 +21,13 @@
                             <option value="fruits">Fruits</option>
                             <option value="vegetables">Vegetables</option>
                             <option value="grains">Grains</option>
-                          </select> 
-                        </div>
-                        <div class="form-group mb-3 w-50">
-                            <input class="form-control" type="text" name="foodItemName" placeholder="Name of Food Item" />
-                          </div>
-                        <div class="form-group mb-3 w-50">
-                            <input type="number" name="quantity" placeholder="Quantity" class="form-control" aria-label="Amount (to the nearest dollar)">
-                          </div>
-                        <div class="input-group mb-3 w-50">
-                            <span class="input-group-text">$</span>
-                            <input type="text" name="Price" placeholder="Price" class="form-control" aria-label="Amount (to the nearest dollar)">
-                          </div>
-                          <input type="submit" value="Sell Food"/>
+                            <!-- Add more options as needed -->
+                        </select>
+
+                        <input type="text" name="foodItemName" placeholder="Name of Food Item" />
+                        <input type="text" name="quantity" placeholder="Quantity" />
+                        <input name="Price" placeholder="Price" type="number" />
+                        <input type='submit' value="Sell Food" />
                     </form>
                 </div>
             </div>

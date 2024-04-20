@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FoodStore;
 use Illuminate\Http\Request;
 
 class SellController extends Controller
@@ -23,9 +24,9 @@ class SellController extends Controller
             'Price' => 'required|numeric',
         ]);
 
-        $path = $request->file('photo')->store('photos');
+        $path = $request->file('photo')->store('photos', 'public');
 
-        $food = new Food;
+        $food = new FoodStore;
         $food->photo = $path;
         $food->category = $request->input('foodCategory');
         $food->name = $request->input('foodItemName');
