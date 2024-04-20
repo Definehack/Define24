@@ -23,7 +23,8 @@
 
                         <input type="text" name="foodItemName" placeholder="Name of Food Item" />
                         <input type="text" name="quantity" placeholder="Quantity" />
-                        <input name="Price" placeholder="Price" type="text" />
+                        <input name="Price" placeholder="Price" type="number" />
+                        <input type='submit' value="Sell Food" />
                     </form>
                 </div>
             </div>
