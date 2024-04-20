@@ -21,17 +21,19 @@
                 <div class="p-6 text-gray-900" style="display: flex;">
                     <div style="flex: 1; padding-right: 1rem;">
                         <!-- Other content goes here -->
-                        <h2>Available Foods</h2>
+                        <p class="lead">Stock</p>
+                        <hr class="mb-4">
                         @foreach ($foods as $food)
-                            <div>
-                                <img src="{{ asset('storage/' . $food->photo) }}" alt="{{ $food->name }}">
-                                <h3>{{ $food->name }}</h3>
-                                <p>{{ $food->description }}</p>
-                                <p>Category: {{ $food->category }}</p>
-                                <p>Quantity: {{ $food->quantity }}</p>
-                                <p>Price: {{ $food->price }}</p>
-                                <!-- Add more fields as needed -->
-                            </div>
+                            <div class="card shadow" style="width: 100%;margin-bottom:10px">
+                                <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{ $food->name }}</h5>
+                                    <p class="card-text">{{ $food->description }}</p>
+                                    <p class="card-text">Category: {{ $food->category }}</p>
+                                    <p class="card-text">Quantity: {{ $food->quantity }}</p>
+                                    <p class="card-text">Price: ₹{{ $food->price }}</p>
+                                </div>
+                              </div>
                         @endforeach
                     </div>
                     <div style="flex: 1; border-left: 2px solid #001; padding-left: 1rem;">
