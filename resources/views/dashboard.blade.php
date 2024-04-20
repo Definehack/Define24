@@ -34,11 +34,11 @@
                                     <p class="card-text">Price: ₹{{ $food->price }}</p>
                                 </div>
                             </div>
-                            <form action="{{ route('foods.destroy', $food->id) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit">Delete</button>
-                                </form>
+                            <form action="{{ route('dashboard.destroyFood', $food->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit">Delete</button>
+                            </form>
                         @endforeach
                     </div>
                     <div style="flex: 1; border-left: 2px solid #001; padding-left: 1rem;">

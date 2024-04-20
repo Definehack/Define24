@@ -21,6 +21,10 @@
                             <option value="fruits">Fruits</option>
                             <option value="vegetables">Vegetables</option>
                             <option value="grains">Grains</option>
+                            <option value="grains">Dairy-Based</option>
+                            <option value="grains">Soups and Stews</option>
+                            <option value="grains">Breads</option>
+
                             <!-- Add more options as needed -->
                         </select>
                         <div class="input-group mb-3">
