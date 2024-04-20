@@ -46,7 +46,7 @@ class SellController extends Controller
 
     public function showBuyFood()
     {
-        $foods = FoodStore::all();
+        $foods = FoodStore::where('user_id', '!=', auth()->id())->get();
         return view('buyFood', ['foods' => $foods]);
     }
 }
