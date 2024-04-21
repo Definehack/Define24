@@ -1,6 +1,6 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight text-center">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Sell Your Surplus Food') }}
         </h2>
     </x-slot>
@@ -15,7 +15,7 @@
                           <div class="form-group mb-3 row">
                             <div style="" class="input-group rounded-3 col">
                                 <input type="file" id="file" accept="image/*" name="photo" onchange="loadFile(event)" class="form-control rounded-3 p-3" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" style="display:none">
-                                <p><label for="file" class="" style="cursor: pointer;">Upload Image</label></p>
+                                <p><label for="file" class="btn btn-primary btn-dark" style="cursor: pointer;">Upload Image</label></p>
                                 <p><img id="output" width="100%" /></p>
                                 <script>
                                     var loadFile = function(event) {
