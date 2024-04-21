@@ -26,7 +26,9 @@
                         @if($foods->isEmpty())
                             <p>No items are currently available.</p>
                         @else
+                        <div class="p-6 text-gray-900 row row-cols-1 row-cols-md-2 g-4">
                             @foreach ($foods as $food)
+                            <div class="col">
                                 <div class="card shadow" style="width: 100%;margin-bottom:10px">
                                     <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
                                     <div class="card-body">
@@ -44,7 +46,9 @@
 
                                     </div>
                                 </div>
+                            </div>
                             @endforeach
+                        </div>
                         @endif
                     </div>
                     <div style="flex: 1; border-left: 2px solid #001; padding-left: 1rem;">
@@ -55,8 +59,8 @@
                             <p>No items have been purchased yet.</p>
                         @else
                             <div class="p-6 text-gray-900 row row-cols-1 row-cols-md-2 g-4">
-                            @foreach ($boughtFoods as $food)
-                                <div class="col">
+                            @foreach ($boughtFoods as $food)    
+                            <div class="col">
                                 <!-- Display the food item -->
                                 <div class="card h-100 shadow" style="width: 100%;margin-bottom:10px">
                                     <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
