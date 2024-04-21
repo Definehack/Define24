@@ -23,6 +23,9 @@ class BuyController extends Controller
         if ($food && $food->user_id != auth()->id()) {
             // Purchase the food item
             $food->Buyer_id = auth()->id();
+            // Mark the food item as sold
+            $food->is_sold = true;
+
             $food->save();
 
             // Store a message for the seller
