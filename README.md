@@ -19,10 +19,32 @@ Distribution system targeted at sellers for managing excess food items
 
 [Embed the live link of project](live_link)
 
-### How it Works ?
+Explaining the working of project :
 
-Explaining the working of project  
-Embed video of project demo
+### Overview
+
+This project is a food delivery application built with Laravel. It aims to reduce food waste by connecting sellers and common people who have surplus food with those who need it.
+
+### Features:
+
+-   User Registration: Users can create a new account, log in, and log out. We have different types of users: sellers, buyers, and delivery personnel.
+-   Food Listing: Sellers can list surplus food along with details like quantity, pickup time, and location.
+-   Food Ordering: Buyers can browse available food listings and place orders.
+-   Order Fulfillment: Delivery personnel can accept orders, pick up food from the seller, and deliver it to the buyer.
+
+### Architecture
+
+The project follows the MVC (Model-View-Controller) architecture that is typical of Laravel applications. The `User`, `FoodItem`, and `Order` models represent the users, food listings, and orders, respectively. The corresponding controllers handle incoming requests and interact with the models. The views are Blade templates that display the data to the user.
+
+### Workflow
+
+When a seller submits the form to create a new food listing, a POST request is sent to the FoodItemController@store method. This method creates a new FoodItem model, sets the properties based on the form input, and saves it to the database. Then, it redirects the seller back to their list of food listings.
+
+### Future Improvements
+
+In the future, we plan to add a rating system for sellers and delivery personnel. We also plan to add a feature for buyers to save their favorite sellers.
+
+Embed video of project demo:
 
 ### Technologies used
 
