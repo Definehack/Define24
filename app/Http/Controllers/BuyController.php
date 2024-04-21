@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\FoodStore;
-
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Message;
 
 class BuyController extends Controller
 {
@@ -24,6 +25,11 @@ class BuyController extends Controller
             $food->Buyer_id = auth()->id();
             $food->save();
 
+            // Store a message for the seller
+            Message::create([
+                'user_id' => $food->user_id,
+                'message' => 'Your item ' . $food->name . ' has been purchased.'
+            ]);
             return redirect()->route('dashboard')->with('success', 'Food item purchased successfully');
         }
     }
