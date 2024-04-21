@@ -14,9 +14,13 @@
                        
                           <div class="form-group mb-3 row">
                             <div style="" class="input-group rounded-3 col">
-                                <input type="file" id="file" accept="image/*" name="photo" onchange="loadFile(event)" class="form-control rounded-3 p-3" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" style="display:none">
-                                <p><label for="file" class="btn btn-primary btn-dark" style="cursor: pointer;">Upload Image</label></p>
-                                <p><img id="output" width="100%" /></p>
+                                <div><input type="file" id="file" accept="image/*" name="photo" onchange="loadFile(event)" class="form-control rounded-3 p-3" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload" style="display:none"></div><br>
+                                <div class=""><p><label for="file" class="btn btn-primary btn-dark" style="cursor: pointer;">Upload Image</label></p></div>
+                                <p><img id="output" width="100%" />
+                                </p>
+                                <div> 
+                                    
+                                </div>
                                 <script>
                                     var loadFile = function(event) {
                                         var image = document.getElementById('output');
