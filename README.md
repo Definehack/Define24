@@ -48,11 +48,11 @@ Embed video of project demo:
 
 ### Technologies used
 
-Laravel
-PHP
-Tailwind-CSS
-Bootstrap
-HTML-VanillaCSS-JS
+Laravel,
+PHP,
+Tailwind-CSS,
+Bootstrap,
+HTML-VanillaCSS-JS,
 Chatbase
 
 ### How to configure
