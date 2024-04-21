@@ -15,6 +15,18 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
+    <script>
+        window.embeddedChatbotConfig = {
+        chatbotId: "WyJlH724O3piNHeV6tVvi",
+        domain: "www.chatbase.co"
+        }
+        </script>
+        <script
+        src="https://www.chatbase.co/embed.min.js"
+        chatbotId="WyJlH724O3piNHeV6tVvi"
+        domain="www.chatbase.co"
+        defer>
+    </script>
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
 

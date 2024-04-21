@@ -10,11 +10,15 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h2>Notifications</h2>
+                    @if(auth()->check())
                     @foreach (auth()->user()->messages as $message)
                         <div class="alert alert-success">
                             {{ $message->message }} ({{ $message->created_at->diffForHumans() }})
                         </div>
                     @endforeach
+                    @else
+                        <p>You are not logged in.</p>
+                    @endif
                 </div>
             </div>
         </div>
