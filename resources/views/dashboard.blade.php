@@ -54,9 +54,11 @@
                         @if($boughtFoods->isEmpty())
                             <p>No items have been purchased yet.</p>
                         @else
+                            <div class="p-6 text-gray-900 row row-cols-1 row-cols-md-2 g-4">
                             @foreach ($boughtFoods as $food)
+                                <div class="col">
                                 <!-- Display the food item -->
-                                <div class="card shadow" style="width: 100%;margin-bottom:10px">
+                                <div class="card h-100 shadow" style="width: 100%;margin-bottom:10px">
                                     <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
                                     <div class="card-body">
                                     <h5 class="card-title">{{ $food->name }}</h5>
@@ -66,7 +68,9 @@
                                         <p class="card-text">Price: ₹{{ $food->price }}</p>
                                     </div>
                                 </div>
+                                </div>
                             @endforeach
+                            </div>
                         @endif
                     </div>
                 </div>
