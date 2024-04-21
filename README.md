@@ -15,10 +15,6 @@ Distribution system targeted at sellers for managing excess food items
 [3. Rehan Philip Jacob](https://github.com/Rehanphilipjacob)  
 [4. Vishnu B S](https://github.com/VandVi)
 
-### Link to Project
-
-[Embed the live link of project](live_link)
-
 Explaining the working of project :
 
 ### Overview
