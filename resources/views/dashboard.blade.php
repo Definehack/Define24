@@ -34,7 +34,7 @@
                         <div class="p-6 text-gray-900 row row-cols-1 row-cols-md-2 g-4">
                             @foreach ($foods as $food)
                             <div class="col">
-                                <div class="card shadow" style="width: 100%;margin-bottom:10px">
+                                <div class="card shadow h-100" style="width: 100%;margin-bottom:10px">
                                     <img src="{{ asset('storage/' . $food->photo) }}" class="card-img-top" alt="{{ $food->name }}">
                                     <div class="card-body">
                                     <h5 class="card-title">{{ $food->name }}</h5>
