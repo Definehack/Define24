@@ -45,6 +45,7 @@ When a seller submits the form to create a new food listing, a POST request is s
 In the future, we plan to add a rating system for sellers and delivery personnel. We also plan to add a feature for buyers to save their favorite sellers.
 
 Embed video of project demo:
+https://drive.google.com/file/d/1RLZ_mBy_QxHiF5M-nbCGOeGE_CcYOYFi/view?usp=sharing
 
 ### Technologies used
 
