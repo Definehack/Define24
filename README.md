@@ -7,13 +7,13 @@ The template repository for definehack2024
 Tell us about your project here
 
 ### Team Members
-[1.Team Member 1](enter_github_id_here)   
-[2.Team Member 2](enter_github_id_here)   
-[3.Team Member 3](enter_github_id_here)   
-[4.Team Member 4](enter_github_id_here)   
+[1.Team Member 1](edwin-k-M)   
+[2.Team Member 2](joshuaistaken)   
+[3.Team Member 3](Leojjoel)   
+[4.Team Member 4](joha-2005)   
 
 ### Link to Project
-[Embed the live link of project](live_link)
+[Embed the live link of project]([live_link](https://www.figma.com/file/CJtSuGJ6nchAJ5tCcg571S/DefineProj?type=design&node-id=0%3A1&mode=design&t=zGlCIKaDMyuBKmMZ-1))
 
 ### How it Works ?
 Explaining the working of project  
